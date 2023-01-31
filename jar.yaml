@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.26.176
+  become: yes
+  become_method: sudo
+  remote_user: ubuntu
+  tasks:
+  - name: Copy WAR file to target host
+    copy:
+      src: /home/ubuntu/ansible/calculator.jar
+      dest: /opt/tomcat/webapps

@@ -1,0 +1,12 @@
+---
+- name: Ansible Copy Example Local to Remote
+  hosts: 172.31.26.176
+  tasks:
+    - name: copying file with playbook
+      become: true
+      copy:
+        src: C:\Users\P.V NAGA SAI\warfile
+        dest: /opt/tomcat/webapp
+        owner: apache
+        group: apache
+        mode: 0644
